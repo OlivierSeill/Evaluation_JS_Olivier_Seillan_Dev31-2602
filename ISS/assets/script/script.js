@@ -49,10 +49,8 @@ async function issAPI(map,marker) {
   } catch (erreur) {
     console.error("Impossible de charger les données de l'API:", erreur.message);
   }
-
 }
 
-console.log(issAPI(MAP,MARKER));
 //Appel de la fonction toutes les 1s les secondes
 setInterval(()=>issAPI(MAP,MARKER),1000);
 //Attention on ne met pas la fonction issApi() directement enparamètre mais une fonction anonyme qui appelle la fonction. Sinon la valeur lue par la fonction setInterval() serait l'objet "promise" de la fonction asynchrone issAPI().
